@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="index.css" />
+		<title>Safari Destinations</title>
+		<script src="index.js" defer></script>
+		<script src="tabs.js" defer></script>
+	</head>
+	<body class="destination">
+		<a class="skip-to-content" href="#main">Skip to content</a>
+		<header class="primary-header flex">
+			<div>
+				<img src="./img/shared/logo.svg" alt="Logo" class="logo" />
+			</div>
+			<button class="mobile-nav-toggle" aria-controls="primary-navigation">
+				<span class="sr-only" aria-expanded="false">Menu</span>
+			</button>
+			<nav>
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation underline-indicators flex"
+				>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="index.html"
+							><span aria-hidden="true">00</span>Home</a
+						>
+					</li>
+					<li class="active">
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="destinations.html"
+							><span aria-hidden="true">01</span>Destinations</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="wildlife.html"
+							><span aria-hidden="true">02</span>Wildlife</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="index.html"
+							><span aria-hidden="true">03</span>Bookings</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main" class="grid-container grid-container--destination flow">
+			<h1 class="numbered-title">
+				<span aria-hidden="true">01</span>Pick a destination
+			</h1>
+			<picture id="destination-picture">
+				<source
+					srcset="img/destinations/destination-south-africa.webp"
+					type="image/webp"
+				/>
+				<img
+					src="img/destinations/destination-south-africa.png"
+					alt="south africa"
+				/>
+			</picture>
+
+			<div
+				class="tab-list underline-indicators flex"
+				role="tablist"
+				aria-label="destination list"
+			>
+				<button
+					aria-selected="true"
+					role="tab"
+					aria-controls="south-africa-tab"
+					class="uppercase ff-sans-cond text-accent letter-spacing-2"
+					tabindex="0"
+				>
+					South Africa
+				</button>
+				<button
+					aria-selected="false"
+					role="tab"
+					aria-controls="kenya-tab"
+					class="uppercase ff-sans-cond text-accent letter-spacing-2"
+					tabindex="-1"
+				>
+					Kenya
+				</button>
+				<button
+					aria-selected="false"
+					role="tab"
+					aria-controls="botswana-tab"
+					class="uppercase ff-sans-cond text-accent letter-spacing-2"
+					tabindex="-1"
+				>
+					Botswana
+				</button>
+				<button
+					aria-selected="false"
+					role="tab"
+					aria-controls="namibia-tab"
+					class="uppercase ff-sans-cond text-accent letter-spacing-2"
+					tabindex="-1"
+				>
+					Namibia
+				</button>
+			</div>
+
+			<article class="destination-info flow">
+				<h2 id="destination-heading" class="fs-800 uppercase ff-serif">
+					South Africa
+				</h2>
+				<p id="destination-blurb">
+					South Africa is a country with a lot to offer including Big 5 safaris,
+					city lights, outdoor adventures and an intriguing food and wine
+					culture. It's also home to various malaria-free safari reserves which
+					makes it perfect for Africa vacations for families.
+				</p>
+				<div class="destination-meta flex">
+					<div>
+						<h3 class="text-accent fs-200 uppercase">Population</h3>
+						<p id="destination-population" class="ff-serif uppercase">
+							60,450,995
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-accent fs-200 uppercase">Conservation area</h3>
+						<p id="destination-area" class="ff-serif uppercase">8,545,691 ha</p>
+					</div>
+				</div>
+			</article>
+		</main>
+	</body>
+</html>

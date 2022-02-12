@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./img/favicon-32x32.png"
+		/>
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="index.css" />
+		<title>The Big Five</title>
+		<script src="index.js" defer></script>
+		<script src="dots.js" defer></script>
+	</head>
+	<body class="wildlife">
+		<a class="skip-to-content" href="#main">Skip to content</a>
+		<header class="primary-header flex">
+			<div>
+				<img src="./img/shared/logo.svg" alt="Logo" class="logo" />
+			</div>
+			<button class="mobile-nav-toggle" aria-controls="primary-navigation">
+				<span class="sr-only" aria-expanded="false">Menu</span>
+			</button>
+			<nav>
+				<ul
+					id="primary-navigation"
+					data-visible="false"
+					class="primary-navigation underline-indicators flex"
+				>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="index.html"
+							><span aria-hidden="true">00</span>Home</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="destinations.html"
+							><span aria-hidden="true">01</span>Destinations</a
+						>
+					</li>
+					<li class="active">
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="wildlife.html"
+							><span aria-hidden="true">02</span>Wildlife</a
+						>
+					</li>
+					<li>
+						<a
+							class="ff-sans-cond uppercase text-light letter-spacing-2"
+							href="index.html"
+							><span aria-hidden="true">03</span>Bookings</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main" class="grid-container grid-container--wildlife flow">
+			<h1 class="numbered-title">
+				<span aria-hidden="true">02</span> The Big Five
+			</h1>
+			<div
+				class="dot-indicators flex"
+				role="tablist"
+				aria-label="big five list"
+			>
+				<button
+					aria-selected="true"
+					aria-controls="lion-tab"
+					role="tab"
+					tabindex="0"
+				>
+					<span class="sr-only">Lion</span>
+				</button>
+				<button
+					aria-selected="false"
+					aria-controls="buffalo-tab"
+					role="tab"
+					tabindex="-1"
+				>
+					<span class="sr-only">Buffalo</span>
+				</button>
+				<button
+					aria-selected="false"
+					aria-controls="elephant-tab"
+					role="tab"
+					tabindex="-1"
+				>
+					<span class="sr-only">Elephant</span>
+				</button>
+				<button
+					aria-selected="false"
+					aria-controls="rhino-tab"
+					role="tab"
+					tabindex="-1"
+				>
+					<span class="sr-only">Rhinoceros</span>
+				</button>
+				<button
+					aria-selected="false"
+					aria-controls="leopard-tab"
+					role="tab"
+					tabindex="-1"
+				>
+					<span class="sr-only">Leopard</span>
+				</button>
+			</div>
+			<article
+				id="wildlife-tab"
+				class="wildlife-details flow"
+				role="tabpanel"
+				tabindex="0"
+			>
+				<header class="flow flow--space--small">
+					<h2 id="wildlife-heading" class="fs-600 ff-serif uppercase">
+						(Panthera leo)
+					</h2>
+					<p id="wildlife-name" class="fs-700 ff-serif uppercase">Lion</p>
+				</header>
+				<p id="wildlife-blurb">
+					The lion is a carnivorous feline that lives throughout Africa. It has
+					a short tawny coat with a tufted tail; and, in the male, a prominent
+					mane around the neck and shoulders. There are now only about 20,000
+					lions remaining in the wild.
+				</p>
+			</article>
+			<picture id="wildlife-picture">
+				<source srcset="img/wildlife/wildlife-lion.webp" type="image/webp" />
+				<img src="img/wildlife/wildlife-lion.png" alt="African Lion" />
+			</picture>
+		</main>
+	</body>
+</html>
